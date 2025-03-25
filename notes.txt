@@ -1,0 +1,83 @@
+Typescript
+    adds extra functionality to javaScript
+
+Js is a subset of Typescript
+
+all js is ts but not all ts is javaScript
+
+benefits:
+- static typing
+- code completion
+-refactoring
+-shorthand notations
+
+statically typed (c++, c# Java):
+    int number = 10  -- you mut declare variable and declae what is being stored
+    number = "a" ** immediatly errors
+dynamically typed (javascript, python, ruby):
+    let number = 10
+    number = "a"
+    math.round(number)** would error after compiling
+
+typscript automatically errors anything that would immediatly flag during compilation
+
+you need to configue the ts file before using ts
+
+you have to tell ts what kind of thig you are storing in the variable
+
+typescript is like javascript with type casting aka oop principles + more
+
+obp - object based programming
+oop - object oriented programming
+
+pros:
+    insane scalability
+    ability to use features js cant in ja applications
+    allows for better maitinence/ changes for the lifetime of the applications
+cons:
+    always have to compile
+    stricter coding style
+    technically more typing
+
+js - jenga
+ts - legos
+
+why you should use it:
+
+-research shows that ts can spot 15% of common bug
+-readabuility its easier to see what code should do and when working in a team allows easier understanding
+-it popular you can apply to more jobs
+-learning typescript will give you a better understanding and a new persepctive on js
+-addresses the shortcomings of js
+
+why you shouldnt use ts
+
+typescript takes longer to write than javascript as you have to specify types, so for smaller solo projects its probab;ly not worth it
+ts has to be compiled which can take time, especially larger projects
+
+but the extra time you have to spend writing more presice code and compiling will be more than saved by how many fewer bugs youll hvae in oyur code
+for many projects especially medium to large typescipt saves you time and headaches
+and if you know j, ts is easy to learning
+
+
+
+npm install typescript --save-dev
+
+npx tsc -v
+
+npm init -y
+
+
+declare variable:
+var age : number = 17 ;
+
+after declaring a varibale you cannot reassign the value from number to string ect.
+
+you can declare arrays with a value like number[]
+
+how to compile:
+    -for a specific file, tsc [name of file]
+    -for all files in the terminal folder, npx tsc
+    -if you want a soecific name, tsc index.ts -- oufile file-name.js
+    -have the files watched like Sass, tsc index.ts -w
+
