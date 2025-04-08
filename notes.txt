@@ -81,3 +81,107 @@ how to compile:
     -if you want a soecific name, tsc index.ts -- oufile file-name.js
     -have the files watched like Sass, tsc index.ts -w
 
+
+watch mode:
+    -there is a built in watch mode like nodemon that will compile every time a change is made and saved
+    - tsc app.ts -w // watched app.ts
+    - tsc -w // watched files in during
+
+Initilaize to TS 
+    - watch mode doesnt work without a config file
+    - to configire your ts compiler you need to create the config file using: npx tsc -init
+
+config options
+    - there are many options the few that we will cover are the ones we have the most chance to use in the future
+
+    target : ES2016
+    - states that the target level of JS that you want to compile down to
+    - ES6 is wjat you likely want to be on if you want to be extra sure you can use ES5
+
+    the lib option has lots of different libraries pre-installed that you can add but there is no reaon for us to mess with this option right now
+    in the furutre you will likely be adding new libraries to ths options\
+
+    source map creates a file that allows you to debug your ts file using the js file
+    basically it creates a map while compiling that tells the run time where the js lines are created from  wehn using the ts file. like a package.json,lock file
+
+    outDir : ./
+    out dir defines where th ejs files should be placed when they are done being compiled
+    by default they are in the same directory as the ts file but you are able ti e place them in a different directory
+
+    rootDir : ./
+    tells the compiler where to look when finding files to compile
+    by default it is in the root directory where you are running the init/watch command
+
+    noEmitOnError
+    typically when there is a type error the terminal will let you kn ow but the file will still compile
+    if you enable this setting then the JS will not be created if there are ANY errors in the code
+
+    strict : true
+    this makes sure you are typing clear and consise code and shows error if you dont 
+    when strict is true it activates every option below it, you are able to set this false if you want to customize the strict options yourself
+
+    when creating a program using TS you not want to push the TS files AND the JS files since they are essentially the same thing
+    you should always have *.js in your gitignore from now on
+
+
+    ES6 features
+        - the most recent additions to JS
+        ES6 :
+            - uses let and const to define variables in different ways
+            - arrow functions are just a shorter way to define functions and make callback functions mcuh easier to use
+            - you are able to define a default value for function parameters, if the value is not defined it will automatically fill in a value
+            -adding ... before an iterable object will add each item that object individually
+            - allows the use of ... in the parameters to create an array from all the items in the parameters
+            - multiple variables can be defined at once using destructuring fro arrays or objects
+            
+        ES5 :
+            - only uses var to define variables
+            - uses keyboard functions to create functions
+            - you define the value in the funciton if the value was not defined
+            - the items are added to a temporary variables one at a time using a for loop
+            - functions are created with an 'arguments' value that you can loop through with a for loop
+            - each variable needs to be defined by hand
+
+
+        one last thing: 
+            sometimes there will be errors when importing libs or using the DOM
+            you can ignore errors like this using the !
+            this should only be used when you know that the error is covered and proper
+
+
+TS basics
+
+            ts is microsofts attempt to push js in a more object oriented direction
+            one big step to doing that is adding types to variables and objects
+            you can add a type to any variable by placing colons : after it
+
+            basic types:
+             - number
+             - string
+             - boolean
+             - array
+             - tuple
+             - object
+             - enum
+
+
+             always use type casting, when defining varibales , parameters or functions
+
+            adding types to variables is very easy, everytime you create one just add a colon
+            becasue of our settings they will not allow implicit any types, which will help you know when to do it while starting out\
+            let name: string = 'jimmy';
+            let appID: number = 12873;
+
+
+            the parameters in a function should ne given types to avoid errors while developing
+
+            function add(n1: number, n2: number){
+                return n1 + n2
+            }
+
+
+
+
+        
+
+
