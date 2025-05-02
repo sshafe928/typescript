@@ -391,7 +391,20 @@ TS basics
             - this is a great way to be sure that an object is guaranteed to have a method or and what that method is going to return
             - this avoids errors in large projects where an object may be used over several files, ensuring that they have the required values and methods
 
+Vite isnt needed to create ts files, however using it in the vite projects
+1. npm create-vite@latest
+2.made the project name
+3. selected the framework vanilla
 
+document.querySelector<HTMLDivElement>('#app')!.innerHTML
+
+the ! is used to avoid a null error
+
+firs tinstalling vite gives you small examples of how to use it
+it pre connects all the ts files to themselves
+
+vite preconverts the ts files to js 
+the file gets run throught the script tag as a module and then the project dynamically converts and then runs it as typescript.
 
 
 
