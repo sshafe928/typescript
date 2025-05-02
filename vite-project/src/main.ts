@@ -39,7 +39,7 @@ class TodoListUI {
     this.todoList.getTask().forEach((todo)=>{
       const todoElement = document.createElement('li')
       todoElement.innerHTML = `
-        <input type"checkbox" ${todo.completed ? "checked" : ""}/>
+        <input type="checkbox" ${todo.completed ? "checked" : ""}/>
         <span>${todo.text}</span>
         <button class="remove-todo" data-id="${todo.id}"> Remove</button>
       `
@@ -75,7 +75,7 @@ class TodoListUI {
   //event listeners to the HTML elements in the user interface to respond to user interactions
   bindEvents(){
     document
-      .getElementById("add-to")!
+      .getElementById("add-todo")!
       .addEventListener('click', () => this.addTodo())
 
       document.addEventListener('click', (event) =>{
@@ -88,5 +88,9 @@ class TodoListUI {
   }
 }
 
+const todoList = new TodoList()
+const ui = new TodoListUI(todoList)
 
+ui.displayTasks()
+ui.bindEvents()
 
